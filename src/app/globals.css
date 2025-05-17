@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* White */
+    --foreground: 222 47% 11%; /* Dark Blue/Black */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 222 47% 11%; /* Dark Blue/Black */
+
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 222 47% 11%; /* Dark Blue/Black */
+
+    --primary: 217 91% 60%; /* Bright Blue */
+    --primary-foreground: 0 0% 100%; /* White */
+
+    --secondary: 210 40% 96.1%; /* Light Gray-Blue */
+    --secondary-foreground: 222 47% 11%; /* Dark Blue/Black */
+
+    --muted: 210 40% 96.1%; /* Light Gray-Blue */
+    --muted-foreground: 215 20% 65%; /* Muted Gray */
+
+    --accent: 210 90% 50%; /* Medium Blue */
+    --accent-foreground: 0 0% 100%; /* White */
+
+    --destructive: 0 84% 60%; /* Red */
+    --destructive-foreground: 0 0% 100%; /* White */
+
+    --border: 214 32% 91%; /* Light Gray Border */
+    --input: 214 32% 91%; /* Light Gray Input */
+    --ring: 217 91% 60%; /* Bright Blue for focus rings */
+
+    --radius: 0.5rem; /* Standard rounding */
+
+    --chart-1: 217 91% 60%;
+    --chart-2: 173 58% 56%;
+    --chart-3: 0 72% 66%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 273 70% 67%;
+
+    --sidebar-background: 220 15% 97%; /* Very Light Gray for Sidebar */
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 90% 50%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 214 32% 88%;
+    --sidebar-ring: 217 91% 60%;
+  }
+
+  .dark {
+    --background: 222 47% 11%; /* Dark Blue/Black */
+    --foreground: 210 40% 98%; /* Almost White */
+
+    --card: 222 47% 14%; /* Slightly Lighter Dark Blue */
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 60%; /* Bright Blue */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217 33% 17%; /* Darker Gray-Blue */
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 210 90% 55%; /* Medium Blue */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 63% 51%; /* Red */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217 33% 25%; /* Darker Border */
+    --input: 217 33% 25%;
+    --ring: 217 91% 60%;
+    
+    --chart-1: 217 91% 60%;
+    --chart-2: 173 58% 56%;
+    --chart-3: 0 72% 66%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 273 70% 67%;
+
+    --sidebar-background: 222 47% 10%;
+    --sidebar-foreground: 210 40% 95%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 90% 55%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 217 33% 22%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  /* Subtle star effect for dark mode */
+  .dark body {
+    background-color: hsl(var(--background)); /* Fallback/base dark background */
+    background-image:
+      radial-gradient(1px 1px at 20px 30px, hsl(var(--primary-foreground) / 0.25), transparent),
+      radial-gradient(1px 1px at 60px 80px, hsl(var(--primary-foreground) / 0.15), transparent),
+      radial-gradient(1.5px 1.5px at 100px 150px, hsl(var(--primary-foreground) / 0.2), transparent),
+      radial-gradient(1px 1px at 150px 50px, hsl(var(--primary-foreground) / 0.25), transparent),
+      radial-gradient(1.5px 1.5px at 50px 220px, hsl(var(--primary-foreground) / 0.15), transparent),
+      radial-gradient(1.5px 1.5px at 180px 180px, hsl(var(--primary-foreground) / 0.2), transparent);
+    background-repeat: repeat;
+    background-size: 250px 250px; /* Adjust size for star density */
+    background-attachment: fixed; /* Stars stay in place during scroll */
+  }
+}
