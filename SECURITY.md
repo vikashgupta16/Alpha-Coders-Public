@@ -13,7 +13,7 @@
 **Please DO NOT** create public GitHub issues for security vulnerabilities.
 
 ### Private Disclosure Process
-1. Email security reports to: [security@alpha-coders.net](mailto:security@alpha-coders.net)
+1. Email security reports to: [security@alpha-coders.net](mailto:alpha4coders@gmail.com)
 2. Our team will acknowledge receipt within 48 hours
 3. We'll investigate and provide remediation timeline
 4. Public disclosure after patch release (coordinated with reporter)
